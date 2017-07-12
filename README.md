@@ -1,7 +1,7 @@
 <img src="homeScreenShot.png" alt="home screen shot" align="center" />
 
 # Hi!
-This is a simple but scalable e-commerce site built with React.
+Very fast and scalable e-commerce site built with React.
 I named it Dollar Shirt Club
 
 ### Quickstart
@@ -14,6 +14,14 @@ I named it Dollar Shirt Club
 
 This app includes Unit testing and test coverage with jest and enzyme
 Run `npm run test`.
+
+## Stack
+react
+react-router
+redux
+jest
+enzyme
+eslint
 
 #### Notes
 Application is currently under construction

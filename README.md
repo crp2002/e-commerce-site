@@ -12,16 +12,16 @@ I named it Dollar Shirt Club
 
 #### Testing
 
-This app includes Unit testing and test coverage with jest and enzyme
+This app includes Unit testing and test coverage with jest and enzyme 
 Run `npm run test`.
 
 ## Stack
-react
-react-router
-redux
-jest
-enzyme
-eslint
+react 
+react-router 
+redux 
+jest 
+enzyme 
+eslint 
 
 #### Notes
 Application is currently under construction

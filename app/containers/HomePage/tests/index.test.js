@@ -1,9 +1,8 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import { shallow } from 'enzyme';
 
 import HomePage from '../index';
-import messages from '../messages';
+import People from '../people.mp4';
 
 describe('<HomePage />', () => {
   it('should render the page message', () => {
@@ -11,7 +10,16 @@ describe('<HomePage />', () => {
       <HomePage />
     );
     expect(renderedComponent.contains(
-      <FormattedMessage {...messages.header} />
+      <div>
+        <video id="vid" playsInline autoPlay muted loop>
+          <source src={People} type="video/mp4" />
+        </video>
+        <div id="sqaure" >
+          <h1>Dollar Shirt Club</h1>
+          <p>The best shirts online</p>
+          <button>SHOP</button>
+        </div>
+      </div>
     )).toEqual(true);
   });
 });

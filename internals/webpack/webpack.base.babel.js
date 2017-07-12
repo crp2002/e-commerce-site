@@ -58,7 +58,13 @@ module.exports = (options) => ({
       query: {
         limit: 10000,
       },
-    }],
+    }, {
+      // added this loader for Sass
+      test: /\.scss$/,
+      exclude: /node_modules/,
+      loaders: ['style-loader', 'css-loader', 'sass-loader'],
+    },
+    ],
   },
   plugins: options.plugins.concat([
     new webpack.ProvidePlugin({

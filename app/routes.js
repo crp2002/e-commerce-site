@@ -34,6 +34,14 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     }, {
+      path: '/main',
+      name: 'main',
+      getComponent(nextState, cb) {
+        import('containers/MainPage')
+        .then(loadModule(cb))
+        .catch(errorLoading);
+      },
+    }, {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
@@ -44,3 +52,4 @@ export default function createRoutes(store) {
     },
   ];
 }
+

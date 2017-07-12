@@ -14,3 +14,6 @@ I named it Dollar Shirt Club
 
 This app includes Unit testing and test coverage with jest and enzyme
 Run `npm run test`.
+
+#### Notes
+Application is currently under construction

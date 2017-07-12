@@ -1,3 +1,5 @@
+<img src="homeScreenShot.png" alt="home screen shot" align="center" />
+
 # Hi!
 This is a simple but scalable e-commerce site built with React.
 I named it Dollar Shirt Club

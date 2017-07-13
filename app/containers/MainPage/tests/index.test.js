@@ -1,9 +1,7 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import { shallow } from 'enzyme';
-
+import NavBar from '../NavBar';
 import MainPage from '../index';
-import messages from '../messages';
 
 describe('<MainPage />', () => {
   it('should render the page message', () => {
@@ -11,7 +9,7 @@ describe('<MainPage />', () => {
       <MainPage />
     );
     expect(renderedComponent.contains(
-      <FormattedMessage {...messages.header} />
+      <NavBar />
     )).toEqual(true);
   });
 });

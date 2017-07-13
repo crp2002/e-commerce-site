@@ -1,54 +1,16 @@
-
-video { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    // z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-    background-size: cover;
-    transition: 1s opacity;
+.sideBar{
+  height:100%;
+  width:200px;
+  background-color:#fff;
+  position:fixed!important;
+  overflow:auto
 }
 
-#sqaure { 
-  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-  font-weight:100; 
-  background: rgba(0,0,0,0.3);
-  color: white;
-  padding: 1rem;
-  height: 33%;
-  width: 33%;
-  font-size: 1.2rem;
+.H3{
+  font-size: 14px;
   text-align: center;
-  position: absolute;
-  margin: auto;
-  top: 50%;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
-h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-top: 0;
-  letter-spacing: .3rem;
-}
-#sqaure button { 
-  display: block;
-  width: 80%;
-  padding: .4rem;
-  border: none; 
-  margin: 1rem auto; 
-  font-size: 1.3rem;
-  background: rgba(255,255,255,0.23);
-  color: #fff;
-  border-radius: 3px; 
-  cursor: pointer;
-  transition: .3s background;
-}
-#sqaure button:hover { 
-   background: rgba(0,0,0,0.5);
+
+.wrapper{
+  padding:0.01em 16px
 }

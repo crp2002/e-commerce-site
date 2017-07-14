@@ -5,6 +5,6 @@ import A from '../index';
 describe('<A />', () => {
   it('sould render an anchor tag', () => {
     const renderComponent = shallow(<A />);
-    expect(renderComponent.type()).toEqual('a');
+    expect(renderComponent.find('a').length).toEqual(1);
   });
 });

@@ -15,9 +15,9 @@ import NavBar from './NavBar';
 export default class MainPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h1>
+      <div>
         <NavBar />
-      </h1>
+      </div>
     );
   }
 }

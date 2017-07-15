@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 export default class A extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
+      <div className={this.props.containerStyle}>
         <a className={this.props.styleKind} href={this.props.href} onClick={this.props.toggle}>
           {this.props.message}
         </a>
@@ -19,4 +19,5 @@ A.propTypes = {
   href: PropTypes.string,
   children: PropTypes.object,
   toggle: PropTypes.func,
+  containerStyle: PropTypes.string,
 };

@@ -6,8 +6,8 @@ export default class SubWrapper extends React.PureComponent { // eslint-disable-
   render() {
     return (
       <div className="sub-wrapper" >
-        <A styleKind="sub-category" message="Long Sleeve" />
-        <A styleKind="sub-category" message="Short Sleeve" />
+        <A styleKind="sub-category" message="Long Sleeve" containerStyle="category-container" />
+        <A styleKind="sub-category" message="Short Sleeve" containerStyle="category-container" />
       </div>
     );
   }

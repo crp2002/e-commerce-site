@@ -60,23 +60,23 @@ export default class SectionWrapper extends React.PureComponent { // eslint-disa
   render() {
     return (
       <div className="section-wrapper" >
-        <A styleKind="category" message="Casual" toggle={this.showCasual}>
-          { this.state.showCasual ? <SubWrapper /> : null }
+        <A styleKind="category" message="Casual" whenClicked={this.showCasual}>
+          { this.state.showCasual ? <SubWrapper category="Casual" /> : null }
         </A>
-        <A styleKind="category" message="Work" toggle={this.showWork}>
-          { this.state.showWork ? <SubWrapper /> : null }
+        <A styleKind="category" message="Work" whenClicked={this.showWork}>
+          { this.state.showWork ? <SubWrapper category="Work" /> : null }
         </A>
-        <A styleKind="category" message="Dress" toggle={this.showDress}>
-          { this.state.showDress ? <SubWrapper /> : null }
+        <A styleKind="category" message="Dress" whenClicked={this.showDress}>
+          { this.state.showDress ? <SubWrapper category="Dress" /> : null }
         </A>
-        <A styleKind="category" message="Slim Fit" toggle={this.showSlim} >
-          { this.state.showSlim ? <SubWrapper /> : null }
+        <A styleKind="category" message="Slim Fit" whenClicked={this.showSlim} >
+          { this.state.showSlim ? <SubWrapper category="Slim Fit" /> : null }
         </A>
-        <A styleKind="category" message="Train" toggle={this.showTrain} >
-          { this.state.showTrain ? <SubWrapper /> : null }
+        <A styleKind="category" message="Train" whenClicked={this.showTrain} >
+          { this.state.showTrain ? <SubWrapper category="Train" /> : null }
         </A>
-        <A styleKind="category" message="Sale" toggle={this.showSale}>
-          { this.state.showSale ? <SubWrapper /> : null }
+        <A styleKind="category" message="Sale" whenClicked={this.showSale}>
+          { this.state.showSale ? <SubWrapper category="Sale" /> : null }
         </A>
       </div>
     );

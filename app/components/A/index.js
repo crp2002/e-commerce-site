@@ -4,7 +4,7 @@ export default class A extends React.PureComponent { // eslint-disable-line reac
   render() {
     return (
       <div className={this.props.containerStyle}>
-        <a className={this.props.styleKind} href={this.props.href} onClick={this.props.toggle}>
+        <a className={this.props.styleKind} href={this.props.href} onClick={() => this.props.whenClicked(this.props.message, this.props.category)}>
           {this.props.message}
         </a>
         {this.props.children}
@@ -18,6 +18,7 @@ A.propTypes = {
   message: PropTypes.string,
   href: PropTypes.string,
   children: PropTypes.object,
-  toggle: PropTypes.func,
+  whenClicked: PropTypes.func,
   containerStyle: PropTypes.string,
+  category: PropTypes.string,
 };

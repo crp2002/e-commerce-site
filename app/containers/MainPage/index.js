@@ -11,12 +11,23 @@
 
 import React from 'react';
 import NavBar from './NavBar';
+import ShirtsContainer from './ShirtsContainer';
+import Bar from './Bar';
 
 export default class MainPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+    this.state = {
+      shirtCategory: 'all',
+      sleeveType: 'all',
+    };
+  }
   render() {
     return (
       <div>
         <NavBar />
+        <Bar />
+        <ShirtsContainer />
       </div>
     );
   }

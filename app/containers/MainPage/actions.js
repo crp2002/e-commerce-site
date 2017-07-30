@@ -1,9 +1,14 @@
-import { FILTER_SHIRTS } from './constants';
+import { FILTER_CATEGORY, FILTER_SLEEVE } from './constants';
 
-export const updateShirts = (sleeveSize, category) => { // eslint-disable-line
+export const updateCategory = (category) => { // eslint-disable-line
   return {
-    type: FILTER_SHIRTS,
-    sleeveSize,
+    type: FILTER_CATEGORY,
     category,
+  };
+};
+export const updateSleeve = (sleeve) => { // eslint-disable-line
+  return {
+    type: FILTER_SLEEVE,
+    sleeve,
   };
 };

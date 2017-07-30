@@ -1,8 +1,6 @@
 /**
  * Create the store with asynchronously loaded reducers
  */
-
-import logger from 'redux-logger';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { fromJS } from 'immutable';
 import { routerMiddleware } from 'react-router-redux';
@@ -17,7 +15,6 @@ export default function configureStore(initialState = {}, history) {
   // 2. routerMiddleware: Syncs the location/URL path to the state
   const middlewares = [
     sagaMiddleware,
-    logger,
     routerMiddleware(history),
   ];
 

@@ -1,9 +1,13 @@
-import React from 'react';
-import A from '../../components/A/index';
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { updateCategory, updateSleeve } from './actions';
+import A2 from '../../components/A/index';
 import SubWrapper from './SubWrapper';
 
 // The container for the different shirt catefories
-export default class SectionWrapper extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+class SectionWrapper extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
     this.state = {
@@ -21,64 +25,97 @@ export default class SectionWrapper extends React.PureComponent { // eslint-disa
     this.showTrain = this.showTrain.bind(this);
     this.showSale = this.showSale.bind(this);
   }
-  showCasual() {
+  showCasual(category) {
     this.setState({
       ...this.state,
       showCasual: !this.state.showCasual,
     });
+    if (!this.state.showCasual) {
+      this.props.updateCategory(category);
+      this.props.updateSleeve('all');
+    }
   }
-  showWork() {
+  showWork(category) {
     this.setState({
       ...this.state,
       showWork: !this.state.showWork,
     });
+    if (!this.state.showWork) {
+      this.props.updateCategory(category);
+      this.props.updateSleeve('all');
+    }
   }
-  showDress() {
+  showDress(category) {
     this.setState({
       ...this.state,
       showDress: !this.state.showDress,
     });
+    if (!this.state.showDress) {
+      this.props.updateCategory(category);
+      this.props.updateSleeve('all');
+    }
   }
-  showSlim() {
+  showSlim(category) {
     this.setState({
       ...this.state,
       showSlim: !this.state.showSlim,
     });
+    if (!this.state.showSlim) {
+      this.props.updateCategory(category);
+      this.props.updateSleeve('all');
+    }
   }
-  showTrain() {
+  showTrain(category) {
     this.setState({
       ...this.state,
       showTrain: !this.state.showTrain,
     });
+    if (!this.state.showTrain) {
+      this.props.updateCategory(category);
+      this.props.updateSleeve('all');
+    }
   }
-  showSale() {
+  showSale(category) {
     this.setState({
       ...this.state,
       showSale: !this.state.showSale,
     });
+    if (!this.state.showSale) {
+      this.props.updateCategory(category);
+      this.props.updateSleeve('all');
+    }
   }
   render() {
     return (
       <div className="section-wrapper" >
-        <A styleKind="category" message="Casual" whenClicked={this.showCasual}>
+        <A2 styleKind="category" message="Casual" whenClicked={this.showCasual}>
           { this.state.showCasual ? <SubWrapper category="Casual" /> : null }
-        </A>
-        <A styleKind="category" message="Work" whenClicked={this.showWork}>
+        </A2>
+        <A2 styleKind="category" message="Work" whenClicked={this.showWork}>
           { this.state.showWork ? <SubWrapper category="Work" /> : null }
-        </A>
-        <A styleKind="category" message="Dress" whenClicked={this.showDress}>
+        </A2>
+        <A2 styleKind="category" message="Dress" whenClicked={this.showDress}>
           { this.state.showDress ? <SubWrapper category="Dress" /> : null }
-        </A>
-        <A styleKind="category" message="Slim Fit" whenClicked={this.showSlim} >
+        </A2>
+        <A2 styleKind="category" message="Slim Fit" whenClicked={this.showSlim} >
           { this.state.showSlim ? <SubWrapper category="Slim Fit" /> : null }
-        </A>
-        <A styleKind="category" message="Train" whenClicked={this.showTrain} >
+        </A2>
+        <A2 styleKind="category" message="Train" whenClicked={this.showTrain} >
           { this.state.showTrain ? <SubWrapper category="Train" /> : null }
-        </A>
-        <A styleKind="category" message="Sale" whenClicked={this.showSale}>
+        </A2>
+        <A2 styleKind="category" message="Sale" whenClicked={this.showSale}>
           { this.state.showSale ? <SubWrapper category="Sale" /> : null }
-        </A>
+        </A2>
       </div>
     );
   }
 }
+SectionWrapper.propTypes = {
+  updateCategory: PropTypes.func,
+  updateSleeve: PropTypes.func,
+};
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ updateCategory, updateSleeve }, dispatch);
+}
+export default connect(null, mapDispatchToProps)(SectionWrapper);

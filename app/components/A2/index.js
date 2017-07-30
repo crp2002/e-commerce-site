@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-export default class A extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export default class A2 extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div className={this.props.containerStyle}>
@@ -13,7 +13,7 @@ export default class A extends React.PureComponent { // eslint-disable-line reac
   }
 }
 
-A.propTypes = {
+A2.propTypes = {
   styleKind: PropTypes.string,
   message: PropTypes.string,
   href: PropTypes.string,

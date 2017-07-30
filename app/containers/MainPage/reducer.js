@@ -1,21 +1,19 @@
-// Reducer for SubWrapper. This will update the store with the latest category and size so that the shirts can be filtered
+// Reducers for SubWrapper. This will update the store with the latest category and size so that the shirts can be filtered
+import { FILTER_CATEGORY, FILTER_SLEEVE } from './constants';
 
-import { fromJS } from 'immutable';
-
-import { FILTER_SHIRTS } from './constants';
-
-// The initial state
-const initialState = fromJS({
-  storeCategory: 'All',
-  sleeveSize: 'All',
-});
-
-export default function filterReducer(state = initialState, action) {
+export function categoryReducer(state = null, action) {
   switch (action.type) {
-    case FILTER_SHIRTS:
-      return state
-        .set('storeCategory', action.category)
-        .set('sleeveSize', action.sleeveSize);
+    case FILTER_CATEGORY:
+      return action.category;
+    default:
+      return state;
+  }
+}
+
+export function sleeveReducer(state = null, action) {
+  switch (action.type) {
+    case FILTER_SLEEVE:
+      return action.sleeve;
     default:
       return state;
   }

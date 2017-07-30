@@ -8,7 +8,7 @@ import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
-import filterReducer from 'containers/MainPage/reducer';
+import { categoryReducer, sleeveReducer } from 'containers/MainPage/reducer';
 
 /*
  * routeReducer
@@ -45,7 +45,8 @@ export default function createReducer(asyncReducers) {
   return combineReducers({
     route: routeReducer,
     language: languageProviderReducer,
-    filter: filterReducer,
+    category: categoryReducer,
+    sleeve: sleeveReducer,
     ...asyncReducers,
   });
 }

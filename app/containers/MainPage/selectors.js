@@ -2,24 +2,12 @@
  * MainPage selectors
  */
 
-import { createSelector } from 'reselect';
+import { createSelector } from 'reselect'; // eslint-disable-line
 
-const selectGlobal = (state) => state.get('all');
-// const makeSelectSleeveSize = (state) => state.get('sleeveSize');
-
-
-const makeSelectCategory = () => createSelector(
-  selectGlobal,
-  (globalState) => globalState.get('storeCategory')
-);
-
-const makeSelectSleeveSize = () => createSelector(
-  selectGlobal,
-  (globalState) => globalState.get('sleeveSize')
-);
+const categorySelector = (state) => state.get('category');
+const sleeveSelector = (state) => state.get('sleeve');
 
 export {
-  makeSelectCategory,
-  makeSelectSleeveSize,
-  selectGlobal,
+  categorySelector,
+  sleeveSelector,
 };

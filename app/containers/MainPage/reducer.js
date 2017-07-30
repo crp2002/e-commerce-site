@@ -4,7 +4,7 @@ import { FILTER_CATEGORY, FILTER_SLEEVE } from './constants';
 export function categoryReducer(state = null, action) {
   switch (action.type) {
     case FILTER_CATEGORY:
-      return action.category;
+      return action.category.toLowerCase();
     default:
       return state;
   }
@@ -13,7 +13,7 @@ export function categoryReducer(state = null, action) {
 export function sleeveReducer(state = null, action) {
   switch (action.type) {
     case FILTER_SLEEVE:
-      return action.sleeve;
+      return action.sleeve.toLowerCase().replace(/ sleeve/g, '');
     default:
       return state;
   }

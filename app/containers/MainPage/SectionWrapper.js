@@ -18,12 +18,17 @@ class SectionWrapper extends React.PureComponent { // eslint-disable-line react/
       showTrain: false,
       showSale: false,
     };
+    this.showAll = this.showAll.bind(this);
     this.showCasual = this.showCasual.bind(this);
     this.showWork = this.showWork.bind(this);
     this.showDress = this.showDress.bind(this);
     this.showSlim = this.showSlim.bind(this);
     this.showTrain = this.showTrain.bind(this);
     this.showSale = this.showSale.bind(this);
+  }
+  showAll(category) {
+    this.props.updateCategory(category);
+    this.props.updateSleeve('all');
   }
   showCasual(category) {
     this.setState({
@@ -88,6 +93,7 @@ class SectionWrapper extends React.PureComponent { // eslint-disable-line react/
   render() {
     return (
       <div className="section-wrapper" >
+        <A2 styleKind="category" message="All" whenClicked={this.showAll}></A2>
         <A2 styleKind="category" message="Casual" whenClicked={this.showCasual}>
           { this.state.showCasual ? <SubWrapper category="Casual" /> : null }
         </A2>

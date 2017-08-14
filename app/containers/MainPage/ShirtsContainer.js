@@ -11,8 +11,6 @@ class ShirtsContainer extends React.PureComponent { // eslint-disable-line react
   render() {
     // the collection of shirts to be rendered
     let renderShirts;
-
-    console.log('chekcing the props from render in the shirts container, ', this.props); // eslint-disable-line
     // Make an array of the categoies
     let categoryCollection;
     let uniqueCollection = {}; // eslint-disable-line

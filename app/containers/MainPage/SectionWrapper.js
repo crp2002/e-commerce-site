@@ -7,7 +7,7 @@ import A2 from '../../components/A/index';
 import SubWrapper from './SubWrapper';
 
 // The container for the different shirt catefories
-class SectionWrapper extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export class SectionWrapper extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
     this.state = {
@@ -121,7 +121,7 @@ SectionWrapper.propTypes = {
   updateSleeve: PropTypes.func,
 };
 
-function mapDispatchToProps(dispatch) {
+export function mapDispatchToProps(dispatch) {
   return bindActionCreators({ updateCategory, updateSleeve }, dispatch);
 }
 export default connect(null, mapDispatchToProps)(SectionWrapper);

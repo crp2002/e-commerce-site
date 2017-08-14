@@ -1,12 +1,27 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import ShirtsContainer from '../ShirtsContainer';
+import { shallow } from 'enzyme';
+import { Provider } from 'react-redux';
+import { browserHistory } from 'react-router';
 
-describe('<ShirtsContainer />', () => {
-  it('should render a div with a className bar', () => {
+import ConnectedShirtsContainer from '../ShirtsContainer';
+import configureStore from '../../../store';
+
+describe('<ConnectedShirtsContainer />', () => {
+  let store;
+
+  beforeAll(() => {
+    store = configureStore({}, browserHistory);
+  });
+
+  it('should render a div class with a className shirt-container', () => {
     const renderedComponent = shallow(
-      <ShirtsContainer />
+      <Provider store={store}>
+        <ConnectedShirtsContainer>
+          <div className="shirt-container"></div>
+        </ConnectedShirtsContainer>
+      </Provider>
     );
-    expect(renderedComponent.prop('className')).toBeDefined();
+    expect(renderedComponent.contains(<div className="shirt-container"></div>)).toBe(true);
   });
 });
+

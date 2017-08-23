@@ -17,6 +17,7 @@ export const tempDB =  [
         sleeve: 'short',
         picture: item1,
         price: 5.99,
+        description: 'Orange short sleeve shirt. Perfect for the summer or fall. Made of 80% cotton, and 20% nylon. Will week you cool and dry. 30 day money back guarantee',
       },
       {
         id: 2,

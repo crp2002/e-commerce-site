@@ -4,8 +4,11 @@ export default class Shirt extends React.PureComponent { // eslint-disable-line 
   render() {
     return (
       <div className="itemContainer">
-        <img className={this.props.className} src={this.props.src} role="presentation" />
-        <b className="price" >{`$ ${this.props.price}`}</b>
+        {/* <a href="/details" > */}
+        <a>
+          <img className={this.props.className} src={this.props.src} role="presentation" />
+          <b className="price" >{`$ ${this.props.price}`}</b>
+        </a>
       </div>
     );
   }

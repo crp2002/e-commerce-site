@@ -6,6 +6,9 @@ html, body, a {
  padding: 0 0 0 2px;
  border: 0px;
  }
+ a {
+   text-decoration: none;
+ }
 
 .sideBar {
   font-family: 'Montserrat', sans-serif;
@@ -35,7 +38,6 @@ html, body, a {
 .category {
   width: 100%;
   font-size: 20px;
-  text-decoration: none;
   padding:8px 16px 8px 8px;
   border:none;
   outline:none;
@@ -64,7 +66,6 @@ html, body, a {
   display:block;
   width: 60%;
   font-size: 15px;
-  text-decoration: none;
   padding: 8px 8px 8px 16px;
   border:none;
   outline:none;
@@ -128,4 +129,8 @@ html, body, a {
   height: 100%;
   padding: 20px 10px 0 10px;
   margin-top: 30px;
+}
+
+.price {
+  color: black;
 }

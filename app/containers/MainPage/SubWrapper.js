@@ -39,7 +39,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps({ category, sleeve }) { // eslint-disable-line
   return {
     category, // eslint-disable-line
-    sleeve, // you will set a prop called slleve, to the state.sleeve value (state.slvee comes as an argument)
+    sleeve, // you will set a prop called sleeve, to the state.sleeve value (state.slvee comes as an argument)
   };
 }
 // Wrap the component to inject dispatch and state into it

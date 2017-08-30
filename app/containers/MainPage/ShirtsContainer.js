@@ -1,13 +1,23 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { createStructuredSelector } from 'reselect';
 
 import { categorySelector, sleeveSelector } from './selectors';
+import { getShirtID } from '../DetailsPage/actions';
 import Shirt from '../../components/Shirt/index';
 import { tempDB } from './TempDB'; // A temporary database of shirts
 
 // Container for all the displayed shirts
 class ShirtsContainer extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+
+    this.shirtClick = this.shirtClick.bind(this);
+  }
+  shirtClick(shirtID) {
+    this.props.getShirtID(shirtID);
+  }
   render() {
     // the collection of shirts to be rendered
     let renderShirts;
@@ -46,7 +56,14 @@ class ShirtsContainer extends React.PureComponent { // eslint-disable-line react
         return shirt;
       }
       return (
-        <Shirt className="shirt" src={shirt.picture} key={i} price={shirt.price} />
+        <Shirt
+          className="shirt"
+          src={shirt.picture}
+          key={i}
+          price={shirt.price}
+          shirtID={shirt.id}
+          shirtClick={this.shirtClick}
+        />
       );
     });
     return (
@@ -71,9 +88,14 @@ const mapStateToProps = createStructuredSelector({
   sleeve: sleeveSelector,
 });
 
-export default connect(mapStateToProps)(ShirtsContainer);
+export function mapDispatchToProps(dispacth) {
+  return bindActionCreators({ getShirtID }, dispacth);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShirtsContainer);
 
 ShirtsContainer.propTypes = {
   category: PropTypes.string,
   sleeve: PropTypes.string,
+  getShirtID: PropTypes.func,
 };

@@ -9,6 +9,7 @@ import { LOCATION_CHANGE } from 'react-router-redux';
 
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
 import { categoryReducer, sleeveReducer } from 'containers/MainPage/reducer';
+import { IDshirtReducer } from 'containers/DetailsPage/reducer';
 
 /*
  * routeReducer
@@ -47,6 +48,7 @@ export default function createReducer(asyncReducers) {
     language: languageProviderReducer,
     category: categoryReducer,
     sleeve: sleeveReducer,
+    shirtID: IDshirtReducer,
     ...asyncReducers,
   });
 }

@@ -1,12 +1,13 @@
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 
 export default class A1 extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div className={this.props.containerStyle}>
-        <a className={this.props.styleKind} href={this.props.href}>
+        <Link to={this.props.href} className={this.props.styleKind}>
           {this.props.message}
-        </a>
+        </Link>
         {this.props.children}
       </div>
     );

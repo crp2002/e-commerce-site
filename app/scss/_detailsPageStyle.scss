@@ -1,0 +1,82 @@
+#details-container {
+  // border: solid pink 1px;
+  max-width: 980px;
+  margin: auto;
+}
+
+#left-container, #right-container {
+  display: inline-block;
+  vertical-align: top;
+  // border: solid 2px green;
+}
+
+#left-container {
+  position: relative;
+  height: 300px;
+  text-align: center;
+}
+
+#vertical-container {
+  // border: solid black 1px;
+  width: 90%;
+  // to distribute children evenly vertically
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  // to center vertically this container
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#bottom-container {
+  // border: solid green 1px;
+  display: block;
+
+}
+#shirt-pic, #shirt-price {
+  flex: 1;
+}
+
+#add-to-cart {
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #FF3100;
+  padding: 12px 18px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  line-height: .95;
+  border: none;
+  background: none;
+  outline: none;
+  border: 1px solid #FF3100;
+  border-radius: 20px;
+  overflow: hidden;
+
+
+  &:hover {
+    background-color: #FF3100;
+    color: white;
+  }
+}
+
+.back {
+  display: block;
+}
+
+.col-4 {
+  width: 39%;
+}
+
+.col-6 {
+  width: 59%;
+}
+
+.col-9 {
+  width: 89%;
+}
+

@@ -17,7 +17,12 @@ export const tempDB =  [
         sleeve: 'short',
         picture: item1,
         price: 5.99,
+        brand: 'Long Beach',
         description: 'Orange short sleeve shirt. Perfect for the summer or fall. Made of 80% cotton, and 20% nylon. Will week you cool and dry. 30 day money back guarantee',
+        reviews: [
+          'Great value, I love this shirt!',
+          'My husband loves it, will be coming back'
+        ]
       },
       {
         id: 2,
@@ -25,6 +30,12 @@ export const tempDB =  [
         sleeve: 'short',
         picture: item2,
         price: 14.99,
+        brand: 'Long Beach',
+        description: 'Orange short sleeve shirt. Perfect for the summer or fall. Made of 80% cotton, and 20% nylon. Will week you cool and dry. 30 day money back guarantee',
+        reviews: [
+          'Not as described, it fits too small',
+          'Arrived late'
+        ]
       },
       {
         id: 3,
@@ -32,6 +43,7 @@ export const tempDB =  [
         sleeve: 'long',
         picture: item3,
         price: 7.99,
+        brand: 'Long Beach',
       },
       {
         id: 4,
@@ -39,6 +51,7 @@ export const tempDB =  [
         sleeve: 'long',
         picture: item4,
         price: 4.99,
+        brand: 'Long Beach',
       },
       {
         id: 5,
@@ -46,6 +59,7 @@ export const tempDB =  [
         sleeve: 'long',
         picture: item5,
         price: 11.99,
+        brand: 'Long Beach',
       },
       {
         id: 6,
@@ -53,6 +67,7 @@ export const tempDB =  [
         sleeve: 'long',
         picture: item6,
         price: 10.99,
+        brand: 'London',
       },
       {
         id: 7,
@@ -60,6 +75,7 @@ export const tempDB =  [
         sleeve: 'long',
         picture: item7,
         price: 9.99,
+        brand: 'London',
       },
       {
         id: 8,
@@ -67,6 +83,7 @@ export const tempDB =  [
         sleeve: 'short',
         picture: item8,
         price: 8.99,
+        brand: 'London',
       },
       {
         id: 9,
@@ -74,6 +91,7 @@ export const tempDB =  [
         sleeve: 'long',
         picture: item9,
         price: 7.99,
+        brand: 'London',
       },
       {
         id: 10,
@@ -81,6 +99,7 @@ export const tempDB =  [
         sleeve: 'short',
         picture: active,
         price: 11.99,
+        brand: 'London',
       },
     ];
     

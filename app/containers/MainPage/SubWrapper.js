@@ -21,14 +21,13 @@ class SubWrapper extends React.PureComponent { // eslint-disable-line react/pref
   render() {
     return (
       <div className="sub-wrapper" >
-        <A styleKind="sub-category" message="Long Sleeve" containerStyle="category-container" whenClicked={this.filterSleeve} category={this.props.category} />
-        <A styleKind="sub-category" message="Short Sleeve" containerStyle="category-container" whenClicked={this.filterSleeve} category={this.props.category} />
+        <A styleKind="sub-category" message="Long Sleeve" containerStyle="category-container" whenClicked={this.filterSleeve} />
+        <A styleKind="sub-category" message="Short Sleeve" containerStyle="category-container" whenClicked={this.filterSleeve} />
       </div>
     );
   }
 }
 SubWrapper.propTypes = {
-  category: React.PropTypes.string,
   updateSleeve: PropTypes.func,
 };
 

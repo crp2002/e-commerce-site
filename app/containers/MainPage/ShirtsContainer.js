@@ -59,7 +59,7 @@ class ShirtsContainer extends React.PureComponent { // eslint-disable-line react
         <Shirt
           className="shirt"
           src={shirt.picture}
-          key={i}
+          key={shirt.id}
           price={shirt.price}
           shirtID={shirt.id}
           shirtClick={this.shirtClick}

@@ -8,7 +8,7 @@ import { tempDB } from '../MainPage/TempDB';
 export class DetailsPage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     const selectedShirt = tempDB.filter((shirt) => shirt.id === this.props.shirtID)[0];
-    const reviews = selectedShirt.reviews.map((eachReview) => <p>{eachReview}</p>);
+    const reviews = selectedShirt.reviews ? selectedShirt.reviews.map((eachReview, idx) => <p key={`reviewNumber${idx}`} >{eachReview}</p>) : <p>No reviews at this time</p>;
     return (
       <div id="details-container">
         <Link className="back" to="/main">

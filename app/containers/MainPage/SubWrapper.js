@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux'; // eslint-disable-line
 
 import { selectGlobal, makeSelectCategory, makeSelectSleeveSize } from './selectors'; // eslint-disable-line
 import { updateCategory, updateSleeve } from './actions';
-import A from '../../components/A/index';
+import Block from '../../components/Block/index';
 
 // Subcategory container
 class SubWrapper extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
@@ -21,8 +21,8 @@ class SubWrapper extends React.PureComponent { // eslint-disable-line react/pref
   render() {
     return (
       <div className="sub-wrapper" >
-        <A styleKind="sub-category" message="Long Sleeve" containerStyle="category-container" whenClicked={this.filterSleeve} />
-        <A styleKind="sub-category" message="Short Sleeve" containerStyle="category-container" whenClicked={this.filterSleeve} />
+        <Block styleKind="sub-category" message="Long Sleeve" containerStyle="category-container" whenClicked={this.filterSleeve} />
+        <Block styleKind="sub-category" message="Short Sleeve" containerStyle="category-container" whenClicked={this.filterSleeve} />
       </div>
     );
   }

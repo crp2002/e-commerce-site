@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { updateCategory, updateSleeve } from './actions';
-import A from '../../components/A/index';
+import Block from '../../components/Block/index';
 import SubWrapper from './SubWrapper';
 
 // The container for the different shirt categories
@@ -93,25 +93,25 @@ export class SectionWrapper extends React.PureComponent { // eslint-disable-line
   render() {
     return (
       <div className="section-wrapper" >
-        <A styleKind="category" message="All" whenClicked={this.showAll}></A>
-        <A styleKind="category" message="Casual" whenClicked={this.showCasual}>
+        <Block styleKind="category" message="All" whenClicked={this.showAll}></Block>
+        <Block styleKind="category" message="Casual" whenClicked={this.showCasual}>
           { this.state.showCasual ? <SubWrapper category="Casual" /> : null }
-        </A>
-        <A styleKind="category" message="Work" whenClicked={this.showWork}>
+        </Block>
+        <Block styleKind="category" message="Work" whenClicked={this.showWork}>
           { this.state.showWork ? <SubWrapper category="Work" /> : null }
-        </A>
-        <A styleKind="category" message="Dress" whenClicked={this.showDress}>
+        </Block>
+        <Block styleKind="category" message="Dress" whenClicked={this.showDress}>
           { this.state.showDress ? <SubWrapper category="Dress" /> : null }
-        </A>
-        <A styleKind="category" message="Slim Fit" whenClicked={this.showSlim} >
+        </Block>
+        <Block styleKind="category" message="Slim Fit" whenClicked={this.showSlim} >
           { this.state.showSlim ? <SubWrapper category="Slim Fit" /> : null }
-        </A>
-        <A styleKind="category" message="Train" whenClicked={this.showTrain} >
+        </Block>
+        <Block styleKind="category" message="Train" whenClicked={this.showTrain} >
           { this.state.showTrain ? <SubWrapper category="Train" /> : null }
-        </A>
-        <A styleKind="category" message="Sale" whenClicked={this.showSale}>
+        </Block>
+        <Block styleKind="category" message="Sale" whenClicked={this.showSale}>
           { this.state.showSale ? <SubWrapper category="Sale" /> : null }
-        </A>
+        </Block>
       </div>
     );
   }

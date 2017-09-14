@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router';
-import A2 from '../../../components/A/index';
+import A from '../../../components/A/index';
 
 import ConnectedSectionWrapper, { mapDispatchToProps, SectionWrapper } from '../SectionWrapper';
 
@@ -47,7 +47,7 @@ describe('<ConnectedSectionWrapper />', () => {
   describe('SectionWrapper', () => {
     it('should contain an A2 component with at least two props', () => {
       const renderedComponent = shallow(<SectionWrapper />);
-      expect(renderedComponent.contains(<A2 styleKind="category" message="All" ></A2>)).toEqual(false);
+      expect(renderedComponent.contains(<A styleKind="category" message="All" ></A>)).toEqual(false);
     });
   });
 });

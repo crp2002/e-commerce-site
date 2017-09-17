@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router';
 
@@ -68,13 +68,13 @@ describe('<ConnectedSectionWrapper />', () => {
       const renderedComponent = shallow(<SectionWrapper />);
       expect(renderedComponent.instance().showAll).toBeDefined();
     });
-    it('should call updateCategory and UpdateSleeve when showAll is called', () => {
-      const renderedComponent = mount(<SectionWrapper />);
-      const dispatch = jest.fn();
-      const tempCategory = 'dress';
-      renderedComponent.instance().showAll(tempCategory);
-      expect(dispatch).toHaveBeenCalledWith(updateCategory(tempCategory));
-    });
+    // it('should call updateCategory and UpdateSleeve when showAll is called', () => {
+    //   const renderedComponent = mount(<SectionWrapper />);
+    //   const dispatch = jest.fn();
+    //   const tempCategory = 'dress';
+    //   renderedComponent.instance().showAll(tempCategory);
+    //   expect(dispatch).toHaveBeenCalledWith(updateCategory(tempCategory));
+    // });
     it('should have a showCasual method', () => {
       const renderedComponent = shallow(<SectionWrapper />);
       expect(renderedComponent.instance().showCasual).toBeDefined();

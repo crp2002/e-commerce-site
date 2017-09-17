@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import { browserHistory } from 'react-router';
 
-import ConnectedSubWrapper from '../SubWrapper';
+import ConnectedSubWrapper, { SubWrapper, mapDispatchToProps } from '../SubWrapper';
 import configureStore from '../../../store';
 
 describe('<ConnectedSubWrapper />', () => {
@@ -22,5 +22,19 @@ describe('<ConnectedSubWrapper />', () => {
       </Provider>
     );
     expect(renderedComponent.contains(<div className="sub-wrapper"></div>)).toBe(true);
+  });
+  describe('mapDispatchToProps', () => {
+    it('should inject updateSleeve', () => {
+      const dispatch = jest.fn();
+      const result = mapDispatchToProps(dispatch);
+      expect(result.updateSleeve).toBeDefined();
+    });
+  });
+});
+
+describe('<SubWrapper />', () => {
+  it('should have a filterSleeve method', () => {
+    const renderedComponent = shallow(<SubWrapper />);
+    expect(renderedComponent.instance().filterSleeve).toBeDefined();
   });
 });

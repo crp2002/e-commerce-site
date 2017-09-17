@@ -9,7 +9,7 @@ import Shirt from '../../components/Shirt/index';
 import { tempDB } from './TempDB'; // A temporary database of shirts
 
 // Container for all the displayed shirts
-class ShirtsContainer extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export class ShirtsContainer extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
 

@@ -1,15 +1,12 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect'; // eslint-disable-line
 import { bindActionCreators } from 'redux'; // eslint-disable-line
 
-
-import { selectGlobal, makeSelectCategory, makeSelectSleeveSize } from './selectors'; // eslint-disable-line
-import { updateCategory, updateSleeve } from './actions';
+import { updateSleeve } from './actions';
 import Block from '../../components/Block/index';
 
 // Subcategory container
-class SubWrapper extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export class SubWrapper extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
 
@@ -31,15 +28,8 @@ SubWrapper.propTypes = {
   updateSleeve: PropTypes.func,
 };
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ updateCategory, updateSleeve }, dispatch);
-}
-
-function mapStateToProps({ category, sleeve }) { // eslint-disable-line
-  return {
-    category, // eslint-disable-line
-    sleeve, // you will set a prop called sleeve, to the state.sleeve value (state.slvee comes as an argument)
-  };
+export function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ updateSleeve }, dispatch);
 }
 // Wrap the component to inject dispatch and state into it
-export default connect(mapStateToProps, mapDispatchToProps)(SubWrapper);
+export default connect(null, mapDispatchToProps)(SubWrapper);
